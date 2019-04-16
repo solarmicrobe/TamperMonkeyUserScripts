@@ -12,8 +12,9 @@ var $ = window.jQuery;
 (function() {
     'use strict';
 
-    var zipcode = '26101';// Zipcode to use for location search
-    var radius = '100';// Radius (miles) to search from provided zipcode
+    var zipcode = '66061';// Zipcode to use for location search
+    var radius = '180';// Radius (miles) to search from provided zipcode
+    var category = '29'; // Get category from a user search
 
     var url = window.location.href;
 
@@ -21,13 +22,13 @@ var $ = window.jQuery;
         /*
         * Redirect to search by location page
         */
-        window.location.replace('https://www.govdeals.com/index.cfm?fa=Main.AdvSearchResultsNew&zipcode=' + zipcode + '&miles=' + radius + '&milesKilo=miles&category=00&kWordSelect=2&locationType=miles&kWord=&country=&btn_submit=Submit&searchpg=location');
+        window.location.replace('https://www.govdeals.com/index.cfm?fa=Main.AdvSearchResultsNew&zipcode=' + zipcode + '&miles=' + radius + '&milesKilo=miles&category=' + category + '&kWordSelect=2&locationType=miles&kWord=&country=&btn_submit=Submit&searchpg=location');
     } else if (url.includes('https://www.govdeals.com/index.cfm?fa=Main.Item&itemID=')){
         /*
         * Automatically click the first thumbnail image to open the slideshow
         $('#thumb1').click();
         */
-        
+
         /*
         * Show fullsize images on Advanced Search results
         */
